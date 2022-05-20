@@ -9,8 +9,6 @@ def next_smallest_number(items, x):
 
     for item in items:
         if item <= x:
-            if (state == -1):
-                state = -1
             state = item
         else:
             break
