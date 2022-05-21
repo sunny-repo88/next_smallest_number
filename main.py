@@ -4,7 +4,7 @@ a = [ 3, 4, 6, 9, 10, 12, 14, 15, 17, 19, 21 ]
 
 def next_smallest_number(items, x):
     state = -1
-    if not items: 
+    if not items or not isinstance(items, list): 
         return state
 
     for item in items:
@@ -27,3 +27,8 @@ assert next_smallest_number([], 'a') == -1
 assert next_smallest_number([], None) == -1
 assert next_smallest_number([], 0) == -1
 assert next_smallest_number(a, -1) == -1
+assert next_smallest_number(a, 11) == 10
+assert next_smallest_number(a, 8) == 6
+assert next_smallest_number(9, 8) == -1
+assert next_smallest_number(-1, 8) == -1
+assert next_smallest_number(-1, -1) == -1
